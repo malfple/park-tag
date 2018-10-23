@@ -19,12 +19,12 @@
         <div class="container">
                 <nav onscroll="myFunction">
                     <div class="logo">
-                            <img src="Logo.png" width="75px" height="75px">
+                            <p><img src="Logo.png" width="75px" height="75px"></p>
                     </div>
                     <ul>
                             <li><a href="">How it works</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="login.html">Log In</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="/login">Log In</a></li>
                     </ul>
                 </nav>
 
