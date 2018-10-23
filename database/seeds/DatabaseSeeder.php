@@ -13,10 +13,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         DB::table('members')->insert([
-        	'first_name' => 'admin',
-        	'last_name' => 'admin',
-        	'email' => 'admin@admin',
-        	'password' => 'admin'
+            'first_name' => 'admin',
+            'last_name' => 'admin',
+            'email' => 'admin@admin',
+            'password' => 'admin'
         ]);
     }
 }
