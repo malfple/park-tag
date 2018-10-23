@@ -19,11 +19,27 @@ class LoginController extends Controller
                 $found = 1;
             }
         }
-        if($found == 1)return redirect('/index');
-        else return redirect('/login');
+        if($found == 1)return redirect('/index'); // login successful
+        else return redirect('/login'); // login failed, because member not found
     }
 
     public function addNewUser(){
-        return $_POST;
+        $found = 0;
+        $members = DB::table('members')->get();
+        foreach($members as $member){
+            if($member->email == $_POST['email'] && $member->password == $_POST['password']){
+                $found = 1;
+            }
+        }
+        if($found == 1)return redirect('/login'); // register fail, because user already exist
+        else{
+            DB::table('members')->insert([
+                'first_name' => $_POST['fname'],
+                'last_name' => $_POST['lname'],
+                'email' => $_POST['email'],
+                'password' => $_POST['password']
+            ]);
+            redirect('/index');
+        }
     }
 }
