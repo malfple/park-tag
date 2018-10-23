@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Roboto', sans-serif;
+  width:100%;
+}
+nav {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding:10px 20px;
+  box-sizing:border-box;
+  transition: .5s;
+}
+
+nav.black {
+  background: rgba(0,0,0,.9);
+  height:80px;
+  padding: 10px 50px;
+}
+nav.black ul{
+ margin:0.5rem;
+}
+
+nav.black ul li a {
+  color:#fff;
+}
+
+nav.black .logo p {
+  height:60px;
+  color:white;
+}
+
+nav .logo p {
+  float: left;
+  font-size:3rem;
+  margin:0;
+  padding:0;
+  font-weight:bold;
+}
+
+nav ul {
+  float:right;
+  padding:0;
+  display:flex;
+}
+
+nav ul li {
+  list-style:none;
+}
+
+nav ul li a {
+  linej-height: 80px;
+  color: #262626;
+  padding: 15px 20px;
+  display:block;
+  margin:0 .1rem;
+  text-decoration:none;
+  text-transform:uppercase;
+  transitoin: .5s;
+  font-weight:bold;
+}
+
+nav ul li a.active , nav ul li a:hover {
+  color:#fff;
+  background:#179b77;
+  transition: .5s ease-out;
+}
+
+section.sec1 {
+  width:100%;
+  height:100vh;
+  background:url("https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size:cover;
+  background-position:center;
+}
+
+section .content {
+  padding:100px;
+}
+
+section .content h2 {
+  font-size: 3rem;
+}
+
+section .content p {
+  margin: 20px 0 0 ;
+  padding:0;
+  font-size:1.2rem;
+}
+
+.container_12 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+
+.grid_12 {
+  display:inline;
+  float: left;
+  position: relative;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/*===============footer=======================*/
+.footer {
+  display: block;
+    padding-bottom: 35px;
+    padding-top: 25px;
+    font-size: 14px;
+    color: #aaa;
+    line-height: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: black;
+}
+.footer a{
+  color: white;
+  text-decoration: none;
+  padding: 25px;
+}
+
+.footer img{
+  float: right;
+  padding-right: 2%;
+}
+
+.fblogo{
+  margin-right: 10%;
+}
+
+.text{
+  float: left;
+}
+/*==================end of footer===========*/
+
+.selection-template{
+  padding-bottom: 10px;
+}
+.selection-header{
+  display: inline;
+  border-style: groove;
+  border-color: gray;
+  border-radius: 50px;
+  background-color: gray;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.selection-header a{
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.selection-header:hover{
+  opacity: 1;
+}
+
+.selection-body{
+  display: inline;
+  margin: 10px;
+}
+
+.selection-body:hover{
+  opacity: 1;
+}
+
+.selection-body a{
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.inp-format{
+  padding: 10px;
+  font-size: 20px;
+  display: inline;
+  border-style: groove;
+  border-color: gray;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+.input-format{
+  padding: 5px;
+  font-size: 15px;
+  display: inline;
+  border-style: groove;
+  border-color: gray;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+.submit-button{
+  background-color: gray;
+  display: inline;
+  border-style: groove;
+  border-color: gray;
+  border-radius: 50px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.submit-button a{
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+}
+
+.date{
+  float: right;
+  padding-right: 40%;
+}
