@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', 'LoginController@showForm');
+Route::post('/loginLogin', 'LoginController@verifyUser');
+Route::post('/loginSignUp', 'LoginController@addNewUser');
 
 Route::get('/index', function () {
     return view('index');
@@ -26,3 +26,4 @@ Route::get('/index', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
