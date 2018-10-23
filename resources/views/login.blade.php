@@ -16,21 +16,22 @@
                 <div id="signup">   
                     <h1>Sign Up for Free</h1>
                     
-                    <form action="/" method="post">
+                    <form action="/loginSignUp" method="post">
+                    {{ csrf_field() }}
                     
                     <div class="top-row">
                         <div class="field-wrap">
                             <label>
                                 First Name<span class="req">*</span>
                             </label>
-                            <input type="text" required autocomplete="off" />
+                            <input name="fname" type="text" required autocomplete="off" />
                         </div>
                 
                         <div class="field-wrap">
                             <label>
                                 Last Name<span class="req">*</span>
                             </label>
-                            <input type="text"required autocomplete="off"/>
+                            <input name="lname" type="text" required autocomplete="off"/>
                         </div>
                     </div>
 
@@ -38,14 +39,14 @@
                         <label>
                             Email Address<span class="req">*</span>
                         </label>
-                        <input type="email"required autocomplete="off"/>
+                        <input name="email" type="email" required autocomplete="off"/>
                     </div>
                     
                     <div class="field-wrap">
                         <label>
                             Set A Password<span class="req">*</span>
                         </label>
-                        <input type="password"required autocomplete="off"/>
+                        <input name="password" type="password" required autocomplete="off"/>
                     </div>
                     
                     <button type="submit" class="button button-block"/>Get Started</button>
@@ -57,20 +58,20 @@
                 <div id="login">   
                     <h1>Welcome Back!</h1>
                     
-                    <form action="/" method="post">
-                    
+                    <form action="/loginLogin" method="POST">
+                        {{ csrf_field() }}
                         <div class="field-wrap">
                         <label>
                             Email Address<span class="req">*</span>
                         </label>
-                        <input type="email"required autocomplete="off"/>
+                        <input name="email" type="email"required autocomplete="off"/>
                     </div>
                     
                     <div class="field-wrap">
                         <label>
                             Password<span class="req">*</span>
                         </label>
-                        <input type="password"required autocomplete="off"/>
+                        <input name="password" type="password"required autocomplete="off"/>
                     </div>
                     
                     <p class="forgot"><a href="#">Forgot Password?</a></p>
