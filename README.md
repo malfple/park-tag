@@ -10,5 +10,6 @@ git clone https://github.com/malfple/park-tag.git
 then go into the folder
 ```
 composer install
-php artisan migrate
+php artisan migrate:fresh
+php artisan db:seed
 ```
