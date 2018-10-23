@@ -27,3 +27,7 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/test', function(){
+	return DB::table('members')->get();
+});
+
