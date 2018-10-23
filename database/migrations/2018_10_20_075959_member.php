@@ -16,17 +16,10 @@ class Member extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->increments('id');
             
-            $table->string('name');
-            $table->string('plate_no');
-            $table->string('phone_no');
+            $table->string('first_name');
+            $table->string('last_name');
             $table->string('email')->unique();
-            $table->string('no_stnk');
-
-            $table->string('username');
             $table->string('password');
-            $table->string('type_member');
-            $table->integer('balance');
-            $table->string('type_ticket');
             $table->rememberToken();
             $table->timestamps();
         });
