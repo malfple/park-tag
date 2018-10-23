@@ -19,7 +19,7 @@
         <div class="container">
                 <nav onscroll="myFunction">
                     <div class="logo">
-                            <p>Logo</p>
+                            <img src="Logo.png" width="75px" height="75px">
                     </div>
                     <ul>
                             <li><a href="">How it works</a></li>
@@ -31,7 +31,7 @@
                 <section class="sec2">
                     <div class="content">
                         <div class="title">
-                            <h2 style="padding-bottom: 20px">Park-Tag</h2>
+                            <img style="padding-bottom: 20px" src="Web Banner v3.png">
                         </div>
                         <div class="selection-template">
                             <div class="selection-header">
