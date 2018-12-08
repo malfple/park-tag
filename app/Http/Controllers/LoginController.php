@@ -2,44 +2,41 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\User;
 
 class LoginController extends Controller
 {
     public function showForm(){
+        if(Auth::check())return redirect('/index');
         return view('login');
     }
 
-    public function verifyUser(){
-        $found = 0;
-        $members = DB::table('members')->get();
-        foreach($members as $member){
-            if($member->email == $_POST['email'] && $member->password == $_POST['password']){
-                $found = 1;
-            }
+    public function verifyUser(Request $request){
+        $user = User::where('email', $request->email)->where('password', $request->password)->first();
+        if(!$user){
+            dd("user doesn't exist");
+        }else{
+            Auth::login($user);
+            return redirect('/index');
         }
-        if($found == 1)return redirect('/index'); // login successful
-        else return redirect('/login'); // login failed, because member not found
     }
 
-    public function addNewUser(){
-        $found = 0;
-        $members = DB::table('members')->get();
-        foreach($members as $member){
-            if($member->email == $_POST['email'] && $member->password == $_POST['password']){
-                $found = 1;
-            }
+    public function addNewUser(Request $request){
+        if(User::where('email', $request->email)->first()){
+            dd("email already exist");
         }
-        if($found == 1)return redirect('/login'); // register fail, because user already exist
-        else{
-            DB::table('members')->insert([
-                'first_name' => $_POST['fname'],
-                'last_name' => $_POST['lname'],
-                'email' => $_POST['email'],
-                'password' => $_POST['password']
-            ]);
-            redirect('/index');
-        }
+        $user = new User;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->role = "Member";
+        $user->save();
+        return redirect('/login');
+    }
+
+    public function doLogout(){
+        Auth::logout();
+        return redirect('/login');
     }
 }

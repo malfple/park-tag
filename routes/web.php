@@ -18,10 +18,9 @@ Route::get('/', function () {
 Route::get('/login', 'LoginController@showForm');
 Route::post('/loginLogin', 'LoginController@verifyUser');
 Route::post('/loginSignUp', 'LoginController@addNewUser');
+Route::get('/logout', 'LoginController@doLogout');
 
-Route::get('/index', function () {
-    return view('index');
-});
+Route::get('/index', 'HomeController@showIndex');
 
 Route::get('/contact', function () {
     return view('contact');

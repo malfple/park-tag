@@ -24,7 +24,7 @@
                     <ul>
                             <li><a href="">How it works</a></li>
                             <li><a href="/contact">Contact</a></li>
-                            <li><a href="/login">Log In</a></li>
+                            <li><a href="/logout">Log Out</a></li>
                     </ul>
                 </nav>
 
