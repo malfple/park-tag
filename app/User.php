@@ -28,15 +28,13 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    class User extends Authenticatable{
-        public function payments(){
-            return $this->hasMany('App\Payment');
-        }
-        public function places(){
-            return $this->belongsToMany('App\Place');
-        }
-        public function promos(){
-            return $this->belongsToMany('App\Promo');
-        }
+    public function payments(){
+        return $this->hasMany('App\Payment');
+    }
+    public function places(){
+        return $this->belongsToMany('App\Place');
+    }
+    public function promos(){
+        return $this->belongsToMany('App\Promo');
     }
 }
