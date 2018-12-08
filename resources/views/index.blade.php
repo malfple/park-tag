@@ -52,7 +52,7 @@
                             <div class="submit-form">
                                 <form id="bookingForm">
                                     <div class="form-template">
-                                        Name <br><input type="text" name="name" placeholder="xXxPu$$yD3sTroYer69xXx" class="input-format">
+                                        Name <br><input type="text" name="name" placeholder="Input your name" y class="input-format">
                                     </div>
 
                                     <div class="date">
@@ -82,10 +82,10 @@
 
 
                                     <div class="form-template">
-                                        License Plate <br><input type="text" name="plateNumber" placeholder="B 3 GO" class="input-format">
+                                        License Plate <br><input type="text" name="plateNumber" placeholder="Input your plate number" class="input-format">
                                     </div>
                                     <div class="form-template">
-                                        Email <br><input type="text" name="email" placeholder="RANDZCORE@gmail.com" class="input-format">
+                                        Email <br><input type="text" name="email" placeholder="Input your email" class="input-format">
                                     </div>
                                     <div class="form-template">
                                         Phone Number <br><input type="text" name="email" placeholder="(+62)" class="input-format">

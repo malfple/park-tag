@@ -19,7 +19,7 @@ btEstimate.addEventListener('click', function(){
     //alert(arrival + " " + leave);
 
     if(isNaN(arrival) || isNaN(leave)){
-        alert('wtf, fill the time first');
+        alert('You need to fill out the time');
     }else if(arrival + 60 > leave){
         alert('You need to book at least 1 hour');
     }else{
