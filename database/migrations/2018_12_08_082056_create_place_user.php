@@ -19,7 +19,7 @@ class CreatePlaceUser extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('place_id')->unsigned();
-            $table->foreign('place_id')->references('id')->on('place');
+            $table->foreign('place_id')->references('id')->on('places');
             $table->timestamps();
         });
     }

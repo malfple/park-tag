@@ -17,9 +17,6 @@ class CreatePromosTable extends Migration
             $table->increments('id');
             $table->String('promo_name');
             $table->integer('promo_price');
-
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

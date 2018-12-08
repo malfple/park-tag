@@ -18,8 +18,8 @@ class CreatePaymentLogsTable extends Migration
             $table->integer('total_price');
             $table->datetime('transaction_date');
 
-            $table->integer('transaction_id')->unsigned();
-            $table->foreign('transaction_id')->references('id')->on('transactions');
+            $table->integer('payment_id')->unsigned();
+            $table->foreign('payment_id')->references('id')->on('payments');
             $table->timestamps();
         });
     }
