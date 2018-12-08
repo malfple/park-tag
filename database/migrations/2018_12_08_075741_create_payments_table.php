@@ -18,7 +18,7 @@ class CreatePaymentsTable extends Migration
             $table->integer('total_price');
 
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('promos');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->integer('promo_id')->unsigned();
             $table->foreign('promo_id')->references('id')->on('promos');
             $table->integer('place_id')->unsigned();
