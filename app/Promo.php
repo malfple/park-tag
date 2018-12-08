@@ -10,6 +10,6 @@ class Promo extends Model
     	return $this->belongsToMany('App\User');
     }
     public function payment(){
-    	return $this->belongTo('app\Payment');
+    	return $this->belongTo('App\Payment');
     }
 }
