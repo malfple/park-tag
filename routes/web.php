@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/login', 'LoginController@showForm');
 Route::post('/loginLogin', 'LoginController@verifyUser');
 Route::post('/loginSignUp', 'LoginController@addNewUser');
