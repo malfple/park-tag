@@ -1,0 +1,11 @@
+Web Programming
+LA02
+
+Group Parking Tag
+1. Vania Levina - 2001537576
+2. Randy Rachmadi - 2001580164
+3. Rafid Chairullah - 2001591520
+4. Evan Fabian - 2001598640
+5. Christopher Samuel - 2001546025
+
+Github Repository: https://github.com/malfple/park-tag
